@@ -17,11 +17,11 @@ public  class Q5{
         if(n % 2==1){
             return false;
         }
-        Arrays.sort(arr);
-        for(int i = 0;i<n;i+=2){
-            if(arr[i]!=arr[i+1]) return false;
+        int xor = 0;
+        for(int i = 0;i<n;i++){
+            xor^=arr[i]
         }
-        return true;
+        return xor == 0;
 
     }
 }
